@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ESILOS PARA FORMULARIO */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "cmp1 cmp2";
+    gap: 10px;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    padding: 14px 16px;
+    gap: 20px;
+}
+
+.form input{
+    border: 1px solid #008CBA;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+/* ESTILOS PARA LA TABLA */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table thead {
+    background-color: #f2f2f2;
+}
+
+
+
+/* ESTILOS PARA POPUP */
+
+.btn-popup {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px 40px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(163, 163, 165, 0.9);
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.close {
+    background-color: transparent;
+    border: none;
+    color: #f30000;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+}
+
+.modal .modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: wheat;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+@media screen and (max-width:768px) {
+    .container{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: 
+        "cmp1"
+        "cmp2";
+    }
+
+    .form{
+        width: 400px;
+    }
+
+
+    
+}
+

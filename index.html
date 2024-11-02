@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD_TABLAS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- FORMULARIO DE AGREGADO -->
+        <form action="" class="form" id="form">
+            <h2>Formulario de Contacto</h2>
+            <input type="number" placeholder="Ingrese el id_user" id="userId">
+            <input type="number" placeholder="Ingrese el id" id="id">
+            <input type="text" placeholder="Ingrese el titulo" id="title">
+            <input type="text" placeholder="Ingrese el cuerpo" id="body">
+            <button type="submit">Enviar</button>
+        </form>
+
+
+        <!-- TABLA DE CONTENIDOS -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id_user</th>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>body</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+
+        <!-- POPUP MODAL -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <form action="" class="form">
+                    <h2>Edición de Usuario</h2>
+                    <i class="fa-solid fa-xmark close" id="close"></i>
+                    <input type="number" placeholder="Ingrese el id_user" id="userIds">
+                    <input type="number" placeholder="Ingrese el id" id="ids">
+                    <input type="text" placeholder="Ingrese el titulo" id="titles">
+                    <input type="text" placeholder="Ingrese el cuerpo" id="bodys">
+                    <button>Editar Usuario</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
